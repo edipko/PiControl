@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="PiControl:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/PiControl_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="PiControl" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/pi4j-1.0/lib/pi4j-core.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/JSTL/jstl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../SpotOn/JAVA_LIBS/joda-time-2.1.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="PiControl/web/Web" />
+    </root>
+  </artifact>
+</component>
