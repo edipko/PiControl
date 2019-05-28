@@ -1,4 +1,5 @@
-import com.dipko.rasberrypi.PiControlClass;
+package com.dipko.rasberrypi;
+
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 

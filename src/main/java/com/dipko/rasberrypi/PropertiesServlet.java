@@ -1,4 +1,4 @@
-import com.dipko.rasberrypi.SortedProperties;
+package com.dipko.rasberrypi;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,5 +1,5 @@
-import com.dipko.rasberrypi.PiControlClass;
-import com.dipko.rasberrypi.SortedProperties;
+package com.dipko.rasberrypi;
+
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

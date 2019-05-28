@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Gradle: com.pi4j:pi4j-native:so:soft-float:0.0.5">
-    <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pi4j/pi4j-native/0.0.5/6bfbe82876a676c01ff1edb8772ef8ec3d870d04/pi4j-native-0.0.5-soft-float.so" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

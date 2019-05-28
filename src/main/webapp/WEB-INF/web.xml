@@ -6,13 +6,13 @@
 
     <listener>
         <listener-class>
-            BackgroundJobManager
+            com.dipko.rasberrypi.BackgroundJobManager
         </listener-class>
     </listener>
 
     <servlet>
         <servlet-name>ControlServlet</servlet-name>
-        <servlet-class>ControlServlet</servlet-class>
+        <servlet-class>com.dipko.rasberrypi.ControlServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>PropertiesServlet</servlet-name>
-        <servlet-class>PropertiesServlet</servlet-class>
+        <servlet-class>com.dipko.rasberrypi.PropertiesServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
