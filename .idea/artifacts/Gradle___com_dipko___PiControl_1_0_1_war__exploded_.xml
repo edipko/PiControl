@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Gradle : com.dipko : PiControl-1.0.war (exploded)">
-    <output-path>$PROJECT_DIR$/build/libs/exploded/PiControl-1.0.war</output-path>
+  <artifact type="exploded-war" name="Gradle : com.dipko : PiControl-1.0.1.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/PiControl-1.0.1.war</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$">
         <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
@@ -8,18 +8,18 @@
     </properties>
     <root id="root">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/PiControl-1.0.war/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/PiControl-1.0.1.war/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="PiControl_main/web/Web Gradle : PiControl-1.0.war" />
+      <element id="javaee-facet-resources" facet="PiControl_main/web/Web Gradle : PiControl-1.0.1.war" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="PiControl_main" />
-          <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: com.pi4j:pi4j-core:1.2" />
           <element id="library" level="project" name="Gradle: jstl:jstl:1.2" />
           <element id="library" level="project" name="Gradle: joda-time:joda-time:2.8.1" />
-          <element id="file-copy" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.pi4j/pi4j-core/1.2/5259166f896a41c72f3f3a239754b8b1b0f866c2/pi4j-core-1.2.jar" />
         </element>
       </element>
     </root>

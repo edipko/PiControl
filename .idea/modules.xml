@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PiControl.iml" filepath="$PROJECT_DIR$/PiControl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PiControl.iml" filepath="$PROJECT_DIR$/PiControl.iml" group="PiControl" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiControl_main.iml" filepath="$PROJECT_DIR$/.idea/modules/PiControl_main.iml" group="PiControl" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/PiControl_test.iml" filepath="$PROJECT_DIR$/.idea/modules/PiControl_test.iml" group="PiControl" />
     </modules>

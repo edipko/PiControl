@@ -47,7 +47,6 @@
 
   <%
 
-
     String line;
     String delims = "=";
     Double temp1 = 0.0;
@@ -66,7 +65,7 @@
       reader.close();
     }
 
-    txtFilePath = "/sys/bus/w1/devices/28-01143d0f08aa/w1_slave";
+    txtFilePath = "/sys/bus/w1/devices/28-01143d12faaa/w1_slave";
     file = new File(txtFilePath);
     Double temp2_f = 0.0;
 

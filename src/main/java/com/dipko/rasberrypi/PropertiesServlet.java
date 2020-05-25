@@ -30,6 +30,7 @@ public class PropertiesServlet extends HttpServlet {
             String paramValue = request.getParameter(paramName);
             System.out.println("Parameters: " + paramName + "|" + paramValue);
             prop.setProperty(paramName, paramValue);
+
         }
 
 
@@ -45,8 +46,10 @@ public class PropertiesServlet extends HttpServlet {
                 prop.store(output, null);
                 output.close();
             }
+
             // Update memory with new properties
             BackgroundJobManager.readProperties();
+
         } catch (IOException io) {
             io.printStackTrace();
         } finally {

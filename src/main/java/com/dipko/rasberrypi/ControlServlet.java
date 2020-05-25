@@ -38,6 +38,7 @@ public class ControlServlet extends HttpServlet {
         request.setAttribute("pumpStatus", BackgroundJobManager.pcc.isOn());
         request.setAttribute("prop", BackgroundJobManager.prop); // so that you can retrieve in JSP
         request.getRequestDispatcher("/index.jsp").forward(request, response);
+
     }
 
 }

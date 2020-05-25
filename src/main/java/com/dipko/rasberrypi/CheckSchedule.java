@@ -17,7 +17,7 @@ public class CheckSchedule implements Runnable {
     @Override
     public void run() {
         // Do your daily job here.
-       // PiControlClass pcc = new PiControlClass();
+        // PiControlClass pcc = new PiControlClass();
 
         BackgroundJobManager.readProperties();
         Properties props = BackgroundJobManager.prop;
@@ -33,7 +33,7 @@ public class CheckSchedule implements Runnable {
         // Determine if the schedule is disabled (via checkbox)
         boolean useSchedule = true;
         if (props.containsKey("scheduleToggle")) {
-                useSchedule = false;
+            useSchedule = false;
         }
 
         if (useSchedule) {
@@ -69,7 +69,8 @@ public class CheckSchedule implements Runnable {
         }
 
         // Get the temperature and log to file every 15 minutes
-        if (minute == 0) {
+
+       // if (minute == 0) {
 
             String line;
             String delims = "=";
@@ -79,42 +80,61 @@ public class CheckSchedule implements Runnable {
             String histFileName = "/var/log/temphistory.txt";
 
             try {
-            String txtFilePath = "/sys/bus/w1/devices/28-800000281f91/w1_slave";
-            File file1 = new File(txtFilePath);
-            if (file1.exists()) {
-                BufferedReader reader = new BufferedReader(new FileReader(txtFilePath));
-                while ((line = reader.readLine()) != null) {
-                    if (line.contains("t=")) {
-                        temp1 = Double.valueOf(line.split(delims)[1]) / 1000;
+                String txtFilePath = "/sys/bus/w1/devices/28-01143ca246aa/w1_slave";
+                File file1 = new File(txtFilePath);
+                if (file1.exists()) {
+                    BufferedReader reader = new BufferedReader(new FileReader(txtFilePath));
+                    while ((line = reader.readLine()) != null) {
+                        if (line.contains("t=")) {
+                            temp1 = Double.valueOf(line.split(delims)[1]) / 1000;
+                        }
                     }
+                    temp1_f = (temp1 * 9 / 5) + 32;
+
+                    reader.close();
+
                 }
-                temp1_f = (temp1 * 9 / 5) + 32;
 
-                reader.close();
-            }
-
-            txtFilePath = "/sys/bus/w1/devices/28-800000282739/w1_slave";
-            File file2 = new File(txtFilePath);
-            if (file2.exists()) {
-                BufferedReader reader = new BufferedReader(new FileReader(txtFilePath));
-                while ((line = reader.readLine()) != null) {
-                    if (line.contains("t=")) {
-                        temp1 = Double.valueOf(line.split(delims)[1]) / 1000;
+                txtFilePath = "/sys/bus/w1/devices/28-01143d0f08aa/w1_slave";
+                File file2 = new File(txtFilePath);
+                if (file2.exists()) {
+                    BufferedReader reader = new BufferedReader(new FileReader(txtFilePath));
+                    while ((line = reader.readLine()) != null) {
+                        if (line.contains("t=")) {
+                            temp1 = Double.valueOf(line.split(delims)[1]) / 1000;
+                        }
                     }
+                    temp2_f = (temp1 * 9 / 5) + 32;
+
+                    reader.close();
+
                 }
-                temp2_f = (temp1 * 9 / 5) + 32;
 
-                reader.close();
-            }
 
+                Double avg_temp = (temp1_f + temp2_f) / 2;
+                System.out.println("Temp1: " + temp1_f + " Temp2: " + temp2_f + " - Average temp is: " + avg_temp);
+
+            /*
+               * This is only for the greenhouse code
+               *
+                if ( avg_temp < 81 ) {
+                    System.out.println("Turning heater on");
+                    pcc.on();
+                }
+                if ( avg_temp > 84 ) {
+                    System.out.println("Turning heater off");
+                    pcc.off();
+                }
+*/
 
                 PrintWriter pw = new PrintWriter(new FileOutputStream(histFileName));
                 pw.println(dt + "|" + temp1_f + "|" + temp2_f);
                 pw.close();
-            } catch(IOException e) {
+
+            } catch (IOException e) {
 
             }
-        }
+       // }
 
     }
 
